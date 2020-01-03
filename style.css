@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  color: #cc0066;
+  font-size: 3rem;
+}
+
+body {
+  background-color: #df8543;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.row {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.checkans {
+  font-size: 2rem;
+}
