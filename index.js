@@ -16,12 +16,15 @@ $(document).ready(function(){
     $("#ans").show();
     $("#check").show();
     $("#ans").val("");
+    $("#checkans").hide();
     $("#check").click(function(){
       ans = document.getElementById("ans").value;
       if ((randomNumber1+randomNumber2) == parseInt(ans)){
+        $("#checkans").show();
         $("#checkans").text("Correct");
         $("#checkans").css({'color': '#52de97'});
         } else {
+          $("#checkans").show();
         $("#checkans").text("Wrong");
         $("#checkans").css({'color': '#9d2503'});
       }
@@ -40,14 +43,17 @@ $(document).ready(function(){
       $("#ans").show();
       $("#check").show();
       $("#ans").val("");
+      $("#checkans").hide();
       $("#check").click(function(){
         ans = document.getElementById("ans").value;
         if ((randomNumber1-randomNumber2) == parseInt(ans)){
+          $("#checkans").show();
           $("#checkans").text("Correct");
           $("#checkans").css({'color': '#52de97'});
           } else {
-          $("#checkans").text("Wrong");
-          $("#checkans").css({'color': '#9d2503'});
+            $("#checkans").show();
+            $("#checkans").text("Wrong");
+            $("#checkans").css({'color': '#9d2503'});
         }
       });
     });
@@ -64,14 +70,17 @@ $(document).ready(function(){
         $("#ans").show();
         $("#check").show();
         $("#ans").val("");
+        $("#checkans").hide();
         $("#check").click(function(){
           ans = document.getElementById("ans").value;
           if ((randomNumber1*randomNumber2) == parseInt(ans)){
+            $("#checkans").show();
             $("#checkans").text("Correct");
             $("#checkans").css({'color': '#52de97'});
             } else {
-            $("#checkans").text("Wrong");
-            $("#checkans").css({'color': '#9d2503'});
+              $("#checkans").show();
+              $("#checkans").text("Wrong");
+              $("#checkans").css({'color': '#9d2503'});
           }
         });
       });
@@ -88,14 +97,17 @@ $(document).ready(function(){
           $("#ans").show();
           $("#check").show();
           $("#ans").val("");
+          $("#checkans").hide();
           $("#check").click(function(){
             ans = document.getElementById("ans").value;
             if ((randomNumber1/randomNumber2) == parseInt(ans)){
+              $("#checkans").show();
               $("#checkans").text("Correct");
               $("#checkans").css({'color': '#52de97'});
               } else {
-              $("#checkans").text("Wrong");
-              $("#checkans").css({'color': '#9d2503'});
+                $("#checkans").show();
+                $("#checkans").text("Wrong");
+                $("#checkans").css({'color': '#9d2503'});
             }
           });
         });
