@@ -100,7 +100,7 @@ $(document).ready(function(){
           $("#checkans").hide();
           $("#check").click(function(){
             ans = document.getElementById("ans").value;
-            if ((randomNumber1/randomNumber2) == parseInt(ans)){
+            if ((randomNumber1/randomNumber2).toFixed(2) == parseFloat(ans)){
               $("#checkans").show();
               $("#checkans").text("Correct");
               $("#checkans").css({'color': '#52de97'});
