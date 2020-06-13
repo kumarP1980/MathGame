@@ -15,17 +15,26 @@
     <h1>Welcome to Math Game</h1>
   <!--  <div class="container"> -->
   <div class="container-fluid">
+  <button id="g1" onclick="window.location.href='index.html';">Home</button>
     <div class="row">
       <div class="col-lg-3">
-       <button id="g1" onclick="window.location.href='grade1.html';">Grade 1</button>
-       <button id="g2" onclick="window.location.href='grade2.html';">Grade 2</button>
-      </div>
+       <button id="add">Add</button>
+       <button id="minus">Substraction</button>
+       <button id="multiply">Multiply</button>
+       <button id="divide">Divide</button>
+       <h3 id="num1"></h3>
+       <h3 id="opt"></h3>
+       <h3 id="num2"></h3>
+       <h3 id="eql"></h3>
+       <input id="ans" type="text" name="ans" value=""> <button id="check">Check</button><br>
+       <h2 id="checkans" class="checkans"></h2>
+     </div>
      </div>  
   </div>
 
 
   <!-- </div> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="index.js" type="text/javascript"></script>
+  <script src="grade2.js" type="text/javascript"></script>
   </body>
 </html>
