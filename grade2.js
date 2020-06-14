@@ -6,8 +6,8 @@ $(document).ready(function(){
 
 // On Add button click
   $("#add").click(function(){
-    var randomNumber1 = Math.floor(Math.random() * 31);
-    var randomNumber2 = Math.floor(Math.random() * 31);
+    var randomNumber1 = Math.floor(Math.random() * 4001);
+    var randomNumber2 = Math.floor(Math.random() * 4001);
     $("#num1").text(randomNumber1);
     $("#num2").text(randomNumber2);
     $("#opt").text("+");
@@ -22,7 +22,7 @@ $(document).ready(function(){
       if ((randomNumber1+randomNumber2) == parseInt(ans)){
         $("#checkans").show();
         $("#checkans").text("Correct");
-        $("#checkans").css({'color': '#52de97'});
+        $("#checkans").css({'color': '#db03fc'});
         } else {
           $("#checkans").show();
         $("#checkans").text("Wrong");
@@ -33,8 +33,9 @@ $(document).ready(function(){
 
   // On Substraction button click
     $("#minus").click(function(){
-      var randomNumber1 = Math.floor(Math.random() * 21);
-      var randomNumber2 = Math.floor(Math.random() * 20);
+      var randomNumber1 = Math.floor(Math.random() * 4001);
+      var randomNumber2 = Math.floor(Math.random() * 4000);
+	  if (randomNumber1 > randomNumber2) {
       $("#num1").text(randomNumber1);
       $("#num2").text(randomNumber2);
       $("#opt").text("-");
@@ -49,14 +50,17 @@ $(document).ready(function(){
         if ((randomNumber1-randomNumber2) == parseInt(ans)){
           $("#checkans").show();
           $("#checkans").text("Correct");
-          $("#checkans").css({'color': '#52de97'});
+          $("#checkans").css({'color': '#db03fc'});
           } else {
             $("#checkans").show();
             $("#checkans").text("Wrong");
             $("#checkans").css({'color': '#9d2503'});
         }
       });
-    });
+    } else {
+		reset;
+	}
+	});
 
     // On Multiply button click
       $("#multiply").click(function(){
@@ -76,7 +80,7 @@ $(document).ready(function(){
           if ((randomNumber1*randomNumber2) == parseInt(ans)){
             $("#checkans").show();
             $("#checkans").text("Correct");
-            $("#checkans").css({'color': '#52de97'});
+            $("#checkans").css({'color': '#db03fc'});
             } else {
               $("#checkans").show();
               $("#checkans").text("Wrong");
@@ -87,8 +91,9 @@ $(document).ready(function(){
 
       // On Divide button click
         $("#divide").click(function(){
-          var randomNumber1 = Math.floor(Math.random() * 61);
-          var randomNumber2 = Math.floor(Math.random() * 7);
+          var randomNumber1 = Math.floor(Math.random() * 101);
+          var randomNumber2 = Math.floor(Math.random() * 11);
+		if (randomNumber1 > randomNumber2 && randomNumber1 % randomNumber2 == 0){
           $("#num1").text(randomNumber1);
           $("#num2").text(randomNumber2);
           $("#opt").text("÷");
@@ -103,11 +108,14 @@ $(document).ready(function(){
             if ((randomNumber1/randomNumber2).toFixed(2) == parseFloat(ans)){
               $("#checkans").show();
               $("#checkans").text("Correct");
-              $("#checkans").css({'color': '#52de97'});
+              $("#checkans").css({'color': '#db03fc'});
               } else {
                 $("#checkans").show();
                 $("#checkans").text("Wrong");
                 $("#checkans").css({'color': '#9d2503'});
             }
           });
+		} else {
+			reset;
+		}
         });

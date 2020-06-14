@@ -22,7 +22,7 @@ $(document).ready(function(){
       if ((randomNumber1+randomNumber2) == parseInt(ans)){
         $("#checkans").show();
         $("#checkans").text("Correct");
-        $("#checkans").css({'color': '#52de97'});
+        $("#checkans").css({'color': '#db03fc'});
         } else {
           $("#checkans").show();
         $("#checkans").text("Wrong");
@@ -34,7 +34,8 @@ $(document).ready(function(){
   // On Substraction button click
     $("#minus").click(function(){
       var randomNumber1 = Math.floor(Math.random() * 21);
-      var randomNumber2 = Math.floor(Math.random() * 20);
+      var randomNumber2 = Math.floor(Math.random() * 11);
+	  if(randomNumber1 > randomNumber2){
       $("#num1").text(randomNumber1);
       $("#num2").text(randomNumber2);
       $("#opt").text("-");
@@ -49,13 +50,16 @@ $(document).ready(function(){
         if ((randomNumber1-randomNumber2) == parseInt(ans)){
           $("#checkans").show();
           $("#checkans").text("Correct");
-          $("#checkans").css({'color': '#52de97'});
+          $("#checkans").css({'color': '#db03fc'});
           } else {
             $("#checkans").show();
             $("#checkans").text("Wrong");
             $("#checkans").css({'color': '#9d2503'});
         }
       });
+	 } else {
+		 reset;
+	 }
     });
 
     // On Multiply button click
@@ -76,7 +80,7 @@ $(document).ready(function(){
           if ((randomNumber1*randomNumber2) == parseInt(ans)){
             $("#checkans").show();
             $("#checkans").text("Correct");
-            $("#checkans").css({'color': '#52de97'});
+            $("#checkans").css({'color': '#db03fc'});
             } else {
               $("#checkans").show();
               $("#checkans").text("Wrong");
@@ -103,7 +107,7 @@ $(document).ready(function(){
             if ((randomNumber1/randomNumber2).toFixed(2) == parseFloat(ans)){
               $("#checkans").show();
               $("#checkans").text("Correct");
-              $("#checkans").css({'color': '#52de97'});
+              $("#checkans").css({'color': '#db03fc'});
               } else {
                 $("#checkans").show();
                 $("#checkans").text("Wrong");

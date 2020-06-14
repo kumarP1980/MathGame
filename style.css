@@ -26,9 +26,17 @@ h1 {
   /*margin:auto;*/
   margin: 10px 450px;
   background-color: #32a88b;
-
 }
 
 .checkans {
-  font-size: 2rem;
+  font-size: 2rem;  
+}
+
+.col-lg-2 {
+  border: 0.75px solid black;
+  padding: 15px 85px;
+  /*margin:auto;*/
+  margin: 10px 550px;
+  background-color: #32a88b;
+
 }
