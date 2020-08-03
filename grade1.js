@@ -4,6 +4,24 @@ $(document).ready(function(){
   $("#check").hide();
 });
 
+// function to show Correct
+
+function correct() {
+  $("#checkans").show();
+  $("#checkans").text("Correct");
+  $("#checkans").css({'color': '#db03fc'});
+  var tom1 = new Audio("sounds/Correct-answer.mp3");
+  tom1.play();
+}
+// function to show wrong
+function wrong() {
+  $("#checkans").show();
+  $("#checkans").text("Wrong");
+  $("#checkans").css({'color': '#9d2503'});
+  var crash = new Audio("sounds/Wrong-answer-sound-effect.mp3");
+  crash.play();
+}
+
 // On Add button click
   $("#add").click(function(){
     var randomNumber1 = Math.floor(Math.random() * 31);
@@ -20,13 +38,9 @@ $(document).ready(function(){
     $("#check").click(function(){
       ans = document.getElementById("ans").value;
       if ((randomNumber1+randomNumber2) == parseInt(ans)){
-        $("#checkans").show();
-        $("#checkans").text("Correct");
-        $("#checkans").css({'color': '#db03fc'});
+          correct();
         } else {
-          $("#checkans").show();
-        $("#checkans").text("Wrong");
-        $("#checkans").css({'color': '#9d2503'});
+          wrong();
       }
     });
   });
@@ -48,13 +62,9 @@ $(document).ready(function(){
       $("#check").click(function(){
         ans = document.getElementById("ans").value;
         if ((randomNumber1-randomNumber2) == parseInt(ans)){
-          $("#checkans").show();
-          $("#checkans").text("Correct");
-          $("#checkans").css({'color': '#db03fc'});
+            correct();
           } else {
-            $("#checkans").show();
-            $("#checkans").text("Wrong");
-            $("#checkans").css({'color': '#9d2503'});
+            wrong();
         }
       });
 	 } else {
@@ -78,13 +88,9 @@ $(document).ready(function(){
         $("#check").click(function(){
           ans = document.getElementById("ans").value;
           if ((randomNumber1*randomNumber2) == parseInt(ans)){
-            $("#checkans").show();
-            $("#checkans").text("Correct");
-            $("#checkans").css({'color': '#db03fc'});
+              correct();
             } else {
-              $("#checkans").show();
-              $("#checkans").text("Wrong");
-              $("#checkans").css({'color': '#9d2503'});
+              wrong();
           }
         });
       });
@@ -105,13 +111,9 @@ $(document).ready(function(){
           $("#check").click(function(){
             ans = document.getElementById("ans").value;
             if ((randomNumber1/randomNumber2).toFixed(2) == parseFloat(ans)){
-              $("#checkans").show();
-              $("#checkans").text("Correct");
-              $("#checkans").css({'color': '#db03fc'});
+                correct();
               } else {
-                $("#checkans").show();
-                $("#checkans").text("Wrong");
-                $("#checkans").css({'color': '#9d2503'});
+                wrong();
             }
           });
         });
