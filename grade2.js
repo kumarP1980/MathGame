@@ -84,8 +84,8 @@ $("#minus").click(function() {
 
 // On Multiply button click
 $("#multiply").click(function() {
-  var randomNumber1 = Math.floor(Math.random() * 11);
-  var randomNumber2 = Math.floor(Math.random() * 11);
+  var randomNumber1 = Math.floor(Math.random() * 21);
+  var randomNumber2 = Math.floor(Math.random() * 21);
   $("#num1").text(randomNumber1);
   $("#num2").text(randomNumber2);
   $("#opt").text("x");
