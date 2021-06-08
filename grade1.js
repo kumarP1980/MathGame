@@ -33,8 +33,8 @@ function playSound(keyName) {
 
 // On Add button click
 $("#add").click(function() {
-  var randomNumber1 = Math.floor(Math.random() * 41);
-  var randomNumber2 = Math.floor(Math.random() * 41);
+  var randomNumber1 = Math.floor(Math.random() * 1001);
+  var randomNumber2 = Math.floor(Math.random() * 111);
   $("#num1").text(randomNumber1);
   $("#num2").text(randomNumber2);
   $("#opt").text("+");
@@ -56,8 +56,8 @@ $("#add").click(function() {
 
 // On Substraction button click
 $("#minus").click(function() {
-  var randomNumber1 = Math.floor(Math.random() * 31);
-  var randomNumber2 = Math.floor(Math.random() * 21);
+  var randomNumber1 = Math.floor(Math.random() * 41);
+  var randomNumber2 = Math.floor(Math.random() * 31);
   if (randomNumber1 > randomNumber2) {
     $("#num1").text(randomNumber1);
     $("#num2").text(randomNumber2);

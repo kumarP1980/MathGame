@@ -2,6 +2,9 @@
 $(document).ready(function() {
   $("#ans").hide();
   $("#check").hide();
+  $("#quotient").hide();
+  $("#check2").hide();
+  $("#remainder").hide();
 });
 
 // function to show correct and wrong
@@ -44,6 +47,9 @@ $("#add").click(function() {
   $("#check").show();
   $("#ans").val("");
   $("#checkans").hide();
+  $("#quotient").hide();
+  $("#check2").hide();
+  $("#remainder").hide();
   $("#check").click(function() {
     ans = document.getElementById("ans").value;
     if ((randomNumber1 + randomNumber2) == parseInt(ans)) {
@@ -69,6 +75,9 @@ $("#minus").click(function() {
     $("#check").show();
     $("#ans").val("");
     $("#checkans").hide();
+	$("#quotient").hide();
+    $("#check2").hide();
+    $("#remainder").hide();
     $("#check").click(function() {
       ans = document.getElementById("ans").value;
       if ((randomNumber1 - randomNumber2) == parseInt(ans)) {
@@ -84,8 +93,8 @@ $("#minus").click(function() {
 
 // On Multiply button click
 $("#multiply").click(function() {
-  var randomNumber1 = Math.floor(Math.random() * 21);
-  var randomNumber2 = Math.floor(Math.random() * 21);
+  var randomNumber1 = Math.floor(Math.random() * 201);
+  var randomNumber2 = Math.floor(Math.random() * 41);
   $("#num1").text(randomNumber1);
   $("#num2").text(randomNumber2);
   $("#opt").text("x");
@@ -95,6 +104,9 @@ $("#multiply").click(function() {
   $("#check").show();
   $("#ans").val("");
   $("#checkans").hide();
+  $("#quotient").hide();
+  $("#check2").hide();
+  $("#remainder").hide();
   $("#check").click(function() {
     ans = document.getElementById("ans").value;
     if ((randomNumber1 * randomNumber2) == parseInt(ans)) {
@@ -108,20 +120,26 @@ $("#multiply").click(function() {
 // On Divide button click
 $("#divide").click(function() {
   var randomNumber1 = Math.floor(Math.random() * 101);
-  var randomNumber2 = Math.floor(Math.random() * 11);
-  if (randomNumber1 > randomNumber2 && randomNumber1 % randomNumber2 == 0) {
+  var randomNumber2 = Math.floor(Math.random() * 21);
+  if (randomNumber1 > randomNumber2) {
     $("#num1").text(randomNumber1);
     $("#num2").text(randomNumber2);
     $("#opt").text("÷");
     $("#eql").text("=");
     $("h3").show();
-    $("#ans").show();
-    $("#check").show();
-    $("#ans").val("");
+    $("#quotient").show();
+	$("#remainder").show();
+    $("#check2").show();
+	$("#check").hide();
+	$("#ans").hide();
+    $("#quotient").val("");
+	$("#remainder").val("");
     $("#checkans").hide();
-    $("#check").click(function() {
-      ans = document.getElementById("ans").value;
-      if ((randomNumber1 / randomNumber2).toFixed(2) == parseFloat(ans)) {
+    $("#check2").click(function() {
+      quotient = document.getElementById("quotient").value;
+	  remainder = document.getElementById("remainder").value;
+      if (Math.trunc((randomNumber1 / randomNumber2)) == parseInt(quotient)
+		  && (randomNumber1 % randomNumber2) == remainder) {
         playSound("c");
       } else {
         playSound("w");
