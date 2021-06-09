@@ -121,7 +121,7 @@ $("#multiply").click(function() {
 $("#divide").click(function() {
   var randomNumber1 = Math.floor(Math.random() * 101);
   var randomNumber2 = Math.floor(Math.random() * 21);
-  if (randomNumber1 > randomNumber2) {
+  if (randomNumber1 > randomNumber2 && randomNumber2 !=0) {
     $("#num1").text(randomNumber1);
     $("#num2").text(randomNumber2);
     $("#opt").text("÷");
