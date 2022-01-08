@@ -94,7 +94,7 @@ $("#minus").click(function() {
 // On Multiply button click
 $("#multiply").click(function() {
   var randomNumber1 = Math.floor(Math.random() * 201);
-  var randomNumber2 = Math.floor(Math.random() * 41);
+  var randomNumber2 = Math.floor(Math.random() * 201);
   $("#num1").text(randomNumber1);
   $("#num2").text(randomNumber2);
   $("#opt").text("x");
@@ -119,8 +119,8 @@ $("#multiply").click(function() {
 
 // On Divide button click
 $("#divide").click(function() {
-  var randomNumber1 = Math.floor(Math.random() * 101);
-  var randomNumber2 = Math.floor(Math.random() * 21);
+  var randomNumber1 = Math.floor(Math.random() * 801);
+  var randomNumber2 = Math.floor(Math.random() * 61);
   if (randomNumber1 > randomNumber2 && randomNumber2 !=0) {
     $("#num1").text(randomNumber1);
     $("#num2").text(randomNumber2);
